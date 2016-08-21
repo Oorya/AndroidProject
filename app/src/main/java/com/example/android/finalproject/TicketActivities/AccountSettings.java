@@ -1,4 +1,4 @@
-package com.example.android.finalproject.Activities;
+package com.example.android.finalproject.TicketActivities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

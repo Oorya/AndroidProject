@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.android.finalproject.Activities.DetailsTicket;
-import com.example.android.finalproject.Activities.MainActivity;
+import com.example.android.finalproject.TicketActivities.DetailsTicket;
+import com.example.android.finalproject.AuthActivities.MainActivity;
 import com.example.android.finalproject.Ticket;
 import com.example.android.finalproject.Utility.UtlFirebase;
 import com.example.android.finalproject.Utility.UtlImage;

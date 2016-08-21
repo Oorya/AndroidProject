@@ -1,4 +1,4 @@
-package com.example.android.finalproject.Activities;
+package com.example.android.finalproject.TicketActivities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.android.finalproject.Adapter.ChatAdapter;
+import com.example.android.finalproject.AuthActivities.MainActivity;
 import com.example.android.finalproject.Chat;
 import com.example.android.finalproject.R;
 

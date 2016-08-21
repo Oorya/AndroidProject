@@ -1,6 +1,6 @@
 package com.example.android.finalproject;
 
-import com.example.android.finalproject.Activities.MainActivity;
+import com.example.android.finalproject.AuthActivities.MainActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

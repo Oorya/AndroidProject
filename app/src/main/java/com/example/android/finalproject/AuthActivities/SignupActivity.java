@@ -1,4 +1,4 @@
-package com.example.android.finalproject.Activities;
+package com.example.android.finalproject.AuthActivities;
 
 import android.content.Intent;
 import android.os.Bundle;

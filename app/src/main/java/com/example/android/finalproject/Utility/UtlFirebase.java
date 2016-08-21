@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.android.finalproject.Activities.ChatTicket;
-import com.example.android.finalproject.Activities.MainActivity;
-import com.example.android.finalproject.Activities.TicketList;
+import com.example.android.finalproject.TicketActivities.ChatTicket;
+import com.example.android.finalproject.AuthActivities.MainActivity;
+import com.example.android.finalproject.TicketActivities.TicketList;
 import com.example.android.finalproject.Chat;
 import com.example.android.finalproject.Interfaces.FireBaseAble;
 import com.example.android.finalproject.R;

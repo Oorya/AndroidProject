@@ -1,4 +1,4 @@
-package com.example.android.finalproject.Activities;
+package com.example.android.finalproject.AuthActivities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.finalproject.TicketActivities.TicketList;
 import com.example.android.finalproject.R;
 import com.example.android.finalproject.Utility.UtlFirebase;
 import com.google.firebase.auth.FirebaseAuth;

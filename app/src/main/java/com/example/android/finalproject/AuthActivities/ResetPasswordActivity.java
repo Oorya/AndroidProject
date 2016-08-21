@@ -1,4 +1,4 @@
-package com.example.android.finalproject.Activities;
+package com.example.android.finalproject.AuthActivities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
