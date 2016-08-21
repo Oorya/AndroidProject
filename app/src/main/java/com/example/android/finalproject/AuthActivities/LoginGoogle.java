@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.android.finalproject.AuthActivities.MainActivity;
 import com.example.android.finalproject.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -99,6 +98,7 @@ public class LoginGoogle extends AppCompatActivity implements GoogleApiClient.On
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
+
             //Users user=new Users(acct.getDisplayName(),"12345",false);
             //user.saveUser();
             startActivity(new Intent(this,MainActivity.class));
