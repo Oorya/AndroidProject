@@ -1,7 +1,9 @@
-package com.example.android.finalproject;
+package com.example.android.finalproject.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.android.finalproject.R;
 
 public class AdminEntry extends AppCompatActivity {
 

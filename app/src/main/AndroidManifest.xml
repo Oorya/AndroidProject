@@ -35,7 +35,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".AdminEntry" />
+        <activity android:name=".Activities.AdminEntry" />
         <activity android:name=".Activities.LoginGoogle" />
         <activity android:name=".Activities.SignupActivity" />
         <activity android:name=".Activities.ResetPasswordActivity" />
