@@ -280,7 +280,7 @@ public class CreateTicket extends AppCompatActivity implements AdapterView.OnIte
 
     private String getUUID() {
         String blat;
-        //create a unique UUID lkjghlkjg
+        //create a unique UUID
         UUID idOne = UUID.randomUUID();
         //returning the UUID
         return idOne.toString();
