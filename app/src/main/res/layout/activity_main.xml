@@ -1,0 +1,81 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/mid"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="USER"
+            android:id="@+id/user1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_user"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:layout_below="@+id/user1"
+            android:id="@+id/user"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_pass"
+            android:textSize="24sp"
+            android:inputType="textPassword"
+            android:id="@+id/pass"
+            android:layout_below="@+id/user"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:id="@+id/bot"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="30dp"
+            android:id="@+id/button"
+            android:onClick="btnLogin"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="30dp"
+            android:onClick="btnReg"/>
+
+        <Button
+            android:id="@+id/logOut"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/btn_sign_out"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:onClick="btnSignOut"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

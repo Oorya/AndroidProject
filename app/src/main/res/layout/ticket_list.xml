@@ -1,0 +1,54 @@
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ProgressBar
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="My Tickets" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/list_ticket">
+    </ListView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create ticket"
+        android:onClick="btnCreateTicket"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:hint="status"
+        android:id="@+id/status"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change status"
+        android:onClick="btnChange"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        android:onClick="btnLogOut"/>
+
+
+</LinearLayout>
+
