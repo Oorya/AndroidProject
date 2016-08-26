@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AuthActivities.MainActivity"
+            android:name=".AuthActivities.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
         <activity android:name=".AuthActivities.LoginGoogle" />
         <activity android:name=".AuthActivities.SignupActivity" />
         <activity android:name=".AuthActivities.ResetPasswordActivity" />
-        <activity android:name=".AuthActivities.LoginActivity" />
+        <activity android:name=".AuthActivities.MainActivity" />
         <activity android:name=".TicketActivities.AccountSettings"></activity>
     </application>
 

@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.finalproject.TicketActivities.TicketList;
 import com.example.android.finalproject.R;
+import com.example.android.finalproject.TicketActivities.TicketList;
 import com.example.android.finalproject.Utility.UtlFirebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,10 +24,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -155,16 +151,7 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-    private Date getCurrentTime()
-    {
-        //Calendar calendar=Calendar.getInstance();
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd:MM:yyyy");
-        //get current date time with Date()
-        Date date = new Date();
 
-        //return dateFormat.format(cal.getTime()));
-        return date;
-    }
     public static boolean isAdmin()
     {
         return admin;
