@@ -25,7 +25,7 @@ import com.google.android.gms.common.api.Status;
 public class LoginGoogle extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     GoogleSignInOptions gso;
-    GoogleApiClient mGoogleApiClient;
+    public static GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 9001;
     private static final String TAG = "LoginGoogle";
     private ProgressDialog mProgressDialog;
@@ -147,6 +147,7 @@ public class LoginGoogle extends AppCompatActivity implements GoogleApiClient.On
             mProgressDialog.hide();
         }
     }
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 

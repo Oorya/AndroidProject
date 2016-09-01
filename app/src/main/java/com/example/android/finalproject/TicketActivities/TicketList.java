@@ -11,8 +11,12 @@ import android.widget.ProgressBar;
 
 import com.example.android.finalproject.Adapter.TicketListAdapter;
 import com.example.android.finalproject.AuthActivities.LoginActivity;
+import com.example.android.finalproject.AuthActivities.LoginGoogle;
 import com.example.android.finalproject.R;
 import com.example.android.finalproject.Utility.UtlFirebase;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -22,7 +26,8 @@ public class TicketList extends AppCompatActivity {
     public static TicketListAdapter listAdapter;
     private EditText stat;
     private ProgressBar progressBar;
-    private FirebaseAuth auth;
+    //private GoogleApiClient mGoogleApiClient;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -32,7 +37,7 @@ public class TicketList extends AppCompatActivity {
         listTicket=(ListView)findViewById(R.id.list_ticket);
         stat=(EditText)findViewById(R.id.status);
         progressBar=(ProgressBar)findViewById(R.id.progressBar);
-        auth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         //FragmentManager fm = getSupportFragmentManager();
         //progressBar.setVisibility(View.VISIBLE);
         listAdapter = new TicketListAdapter(TicketList.this);
@@ -54,20 +59,33 @@ public class TicketList extends AppCompatActivity {
     }
 
     public void btnLogOut(View view) {
-        auth.signOut();
+        if(true/*firebaseAuth==null*/)
+        {
+            Auth.GoogleSignInApi.signOut(LoginGoogle.mGoogleApiClient).setResultCallback(
+                    new ResultCallback<Status>() {
+                        @Override
+                        public void onResult(Status status) {
+                            // ...
+                        }
+                    });
+        }
+        else
+        {
+            firebaseAuth.signOut();
 
-        // this listener will be called when there is change in firebase user session
-        FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user == null) {
-                    // user auth state is changed - user is null
-                    // launch login activity
-                    startActivity(new Intent(TicketList.this, LoginActivity.class));
-                    finish();
+            // this listener will be called when there is change in firebase user session
+            FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
+                @Override
+                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    if (user == null) {
+                        // user auth state is changed - user is null
+                        // launch login activity
+                        startActivity(new Intent(TicketList.this, LoginActivity.class));
+                        finish();
+                    }
                 }
-            }
-        };
+            };
+        }
     }
 }
